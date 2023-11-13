@@ -6,11 +6,11 @@
 /*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 19:15:44 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/13 22:24:33 by mariannazhu      ###   ########.fr       */
+/*   Updated: 2023/11/13 22:59:37 by mariannazhu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s);
 
