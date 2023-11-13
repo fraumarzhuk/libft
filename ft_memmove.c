@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 17:41:33 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/13 18:04:56 by mzhukova         ###   ########.fr       */
+/*   Created: 2023/11/13 17:59:20 by mzhukova          #+#    #+#             */
+/*   Updated: 2023/11/13 18:21:26 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
+	unsigned char	*dest_arr;
 	unsigned char	*src_arr;
-	unsigned char	*dst_arr;
 	size_t			i;
 
-	*src_arr = (unsigned char *) src;
-	*dst_arr = (unsigned char *) dst;
 	i = 0;
-	if (!dst && !src)
+	*dest_arr = (unsigned char *) dest;
+	*src_arr = (unsigned char *) src;
+	if (!dest && !src)
 		return (NULL);
-	while (n-- > 0)
+	if (dest > src)
 	{
-		dst_arr[i] = src_arr[i];
-		i++;
+		while (len--)
+			dest_arr[len] = src_arr[len];
 	}
+	else
+	{
+		while (i++ <= len)
+			dest_arr[i] = src_arr[i];
+	}
+	return (dest);
 }
