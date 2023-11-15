@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:48:02 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/14 16:11:52 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/15 15:28:06 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		char_ptr++;
 		n--;
 	}
-
 	return (NULL);
 }

@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 15:53:51 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/14 18:05:11 by mzhukova         ###   ########.fr       */
+/*   Created: 2023/11/15 14:12:32 by mzhukova          #+#    #+#             */
+/*   Updated: 2023/11/15 15:01:37 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	char			*p;
+	unsigned int	i;
 
 	i = 0;
-	if (!s)
-		return (0);
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	p = malloc((len + 1) * sizeof(char));
+	if (p == NULL)
+		return (NULL);
+	while (len-- && s[start] != '\0')
+		p[i++] = s[start++];
+	p[i] = '\0';
+	return (p);
 }
+
+// #include <stdio.h>
+
+// int main (void)
+// {
+// 	char *s1 = "Hello beautiful world";
+// 	char *result = ft_substr(s1, 30, 8);
+// 	printf("Result: %s\n", result);
+// 	return (0);
+// }

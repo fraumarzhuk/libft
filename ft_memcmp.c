@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:13:19 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/14 16:26:32 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/15 15:28:27 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	ptr_s1 = (const unsigned char *)s1;
 	ptr_s2 = (const unsigned char *)s2;
-
 	while (n > 0)
 	{
 		if (*ptr_s1 != *ptr_s2)
