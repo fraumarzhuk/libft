@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:12:32 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/15 15:01:37 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:53:20 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	p = malloc((len + 1) * sizeof(char));
-	if (p == NULL)
+	if (!p)
 		return (NULL);
 	while (len-- && s[start] != '\0')
 		p[i++] = s[start++];
@@ -32,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // int main (void)
 // {
 // 	char *s1 = "Hello beautiful world";
-// 	char *result = ft_substr(s1, 30, 8);
+// 	char *result = ft_substr(s1, 9, 8);
 // 	printf("Result: %s\n", result);
 // 	return (0);
 // }
