@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 18:54:28 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 18:48:45 by mzhukova         ###   ########.fr       */
+/*   Created: 2023/11/17 18:11:44 by mzhukova          #+#    #+#             */
+/*   Updated: 2023/11/17 18:16:01 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	size_t	src_len;
-
-	i = 0;
-	src_len = 0;
-	if (src == NULL)
-		return (0);
-	while (src[src_len] != '\0')
-		src_len++;
-	if (dstsize == 0)
-		return (src_len);
-	while (i < (dstsize - 1) && src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (dstsize > 0)
-		dst[i] = '\0';
-	return (src_len);
+	if (n >= 10)
+		ft_putnbr_fd((n / 10), fd);
+	ft_putchar_fd((n % 10 + '0'), fd);
 }

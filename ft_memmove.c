@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
+/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:59:20 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/13 22:59:18 by mariannazhu      ###   ########.fr       */
+/*   Updated: 2023/11/17 19:35:36 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	unsigned char	*src_arr;
 	size_t			i;
 
-	i = 0;
-	*dest_arr = (unsigned char *) dest;
-	*src_arr = (unsigned char *) src;
 	if (!dest && !src)
 		return (NULL);
+	i = 0;
+	dest_arr = (unsigned char *) dest;
+	src_arr = (unsigned char *) src;
 	if (dest > src)
 	{
 		while (len--)

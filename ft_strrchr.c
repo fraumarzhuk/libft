@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 22:59:29 by mariannazhu       #+#    #+#             */
-/*   Updated: 2023/11/14 12:48:02 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 19:41:38 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
+	if (!*s)
+		return (NULL);
 	i = ft_strlen(s);
 	while (i >= 0)
 	{

@@ -6,13 +6,13 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:44:49 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/13 15:50:57 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 19:23:39 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 177)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

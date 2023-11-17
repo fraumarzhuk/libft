@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:35:43 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/16 20:25:38 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:47:39 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,3 +100,18 @@ char	**ft_split(char const *s, char c)
 	result[i] = NULL;
 	return (result);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char *s1 = "ab,abc,,sggs,";
+// 	char del = ',';
+// 	char **res = ft_split(s1, del);
+// 	int i = 0;
+// 	while(res[i]){
+// 		printf("Result: %s\n", res[i]);
+// 		i++;
+// 	}
+// 	return (0);
+
+// }

@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 18:54:28 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 18:48:45 by mzhukova         ###   ########.fr       */
+/*   Created: 2023/11/17 17:55:17 by mzhukova          #+#    #+#             */
+/*   Updated: 2023/11/17 18:51:25 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
-	size_t	src_len;
+	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
-	src_len = 0;
-	if (src == NULL)
-		return (0);
-	while (src[src_len] != '\0')
-		src_len++;
-	if (dstsize == 0)
-		return (src_len);
-	while (i < (dstsize - 1) && src[i] != '\0')
+	while (s[i] != '\0')
 	{
-		dst[i] = src[i];
+		f(i, &s[i]);
 		i++;
 	}
-	if (dstsize > 0)
-		dst[i] = '\0';
-	return (src_len);
 }

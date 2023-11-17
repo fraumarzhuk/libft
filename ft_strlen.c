@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:53:51 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/14 18:05:11 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 19:38:46 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (!s)
+	if (!*s)
 		return (0);
 	while (s[i] != '\0')
 		i++;
