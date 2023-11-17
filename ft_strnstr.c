@@ -3,34 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:33:16 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/14 19:06:29 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 21:44:10 by mariannazhu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const char	*p;
+	size_t	nl;
 
-	if (!*needle)
+	nl = ft_strlen(needle);
+	if (!nl)
 		return ((char *) haystack);
-	while (*haystack && len > 0)
+	while (*haystack && len >= nl)
 	{
-		if (*haystack == *needle)
-		{
-			p = haystack;
-			while (*needle)
-			{
-				p++;
-				needle++;
-			}
-			if (*p == *needle)
-				return ((char *) haystack);
-		}
+		if (*haystack == *needle && !ft_strncmp(haystack, needle, nl))
+			return ((char *)haystack);
 		haystack++;
 		len--;
 	}
