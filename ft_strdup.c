@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:51:04 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 18:48:18 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 21:10:08 by mariannazhu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ char	*ft_strdup(const char *s1)
 	p = ft_calloc(ft_strlen(s1) + 1, sizeof(char));
 	if (p == NULL)
 		return (NULL);
-	p = (char *) ft_strlcpy(p, s1, (ft_strlen(s1) + 1));
+	ft_strlcpy(p, s1, (ft_strlen(s1) + 1));
 	return (p);
 }

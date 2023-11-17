@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:59:20 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 19:35:36 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:50:45 by mariannazhu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	else
 	{
-		while (i++ <= len)
+		while (i < len)
+		{
 			dest_arr[i] = src_arr[i];
+			i++;
+		}
 	}
 	return (dest);
 }

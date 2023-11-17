@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 13:56:47 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 16:50:38 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 21:29:56 by mariannazhu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*allocate_mem(int n)
 
 	len = 0;
 	k = n;
-	if (k < 0)
+	if (k <= 0)
 	{
 		len++;
-		k *= -1;
+		k = -k;
 	}
 	while (k > 0)
 	{
@@ -70,13 +70,13 @@ char	*ft_itoa(int n)
 	res = allocate_mem(n);
 	if (n == 0)
 		*res = '0';
-	if (n == -2147483648)
-		return ("-2147483648");
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		res[i] = '-';
 		i++;
-		n *= -1;
+		n = -n;
 	}
 	while (n > 0)
 	{

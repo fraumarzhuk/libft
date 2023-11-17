@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 18:10:41 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 18:59:22 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:40:09 by mariannazhu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)
 	{
-		write(fd, &s, 1);
+		write(fd, s, 1);
 		s++;
 	}
 	write(fd, "\n", 1);
