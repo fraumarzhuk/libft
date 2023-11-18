@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
+/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 12:58:25 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 21:51:02 by mariannazhu      ###   ########.fr       */
+/*   Updated: 2023/11/18 13:44:38 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,17 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
+
+// int main() {
+//     char str1[] = "A noisy noise annoys an oyster most.";
+//     char str2[] = "bonjour";
+//     int result = ft_strncmp(str1, str2, 4);
+//     if (result < 0) {
+//         printf("str1 is less than str2\n");
+//     } else if (result > 0) {
+//         printf("str1 is greater than str2\n");
+//     } else {
+//         printf("str1 is equal to str2\n");
+//     }
+//     return (0);
+// }

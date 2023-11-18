@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
+/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:45:46 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 21:07:14 by mariannazhu      ###   ########.fr       */
+/*   Updated: 2023/11/18 13:43:45 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c)
+	char	ch;
+
+	ch = (char)c;
+	while (*s != ch)
 	{
 		if (*s == '\0')
 			return (NULL);
@@ -22,3 +25,16 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
+
+// int main()
+// {
+//     const char *str = "A noisy noise annoys an oyster most.";
+//     int target = 'y';
+//     char *result = ft_strchr(str, target);
+//     if (result != NULL)
+//         printf("'%c' is found at position: %ld\n", target, result - str);
+//     else
+//         printf("'%c' was not found in the string.\n", target);
+//     return 0;
+// }
+// //

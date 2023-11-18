@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:41:33 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 18:40:29 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/18 13:42:42 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+// int main()
+// {
+// 	char str2[] = "bonjour";
+// 	char str1[20];
+// 	size_t len = 7;
+// 	ft_memcpy(str1, str2, len * sizeof(char));
+// 	printf("Copied string is: %s\n", str2);
+// }

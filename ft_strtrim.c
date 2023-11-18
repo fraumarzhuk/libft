@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:30:43 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 14:09:18 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/18 13:45:30 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main (void)
 // {
-// 	char *s1 = "aaaa";
-// 	char *set = "aaa";
+// 	char *s1 = "ABC_ABC";
+// 	char *set = "ABC";
 // 	char *r = ft_strtrim(s1, set);
 // 	printf("Result: %s\n", r);
 // 	return (0);

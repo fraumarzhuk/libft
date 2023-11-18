@@ -6,17 +6,25 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:12:32 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/16 18:53:20 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/18 12:22:26 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+size_t	ft_strlen(const char *s);
+
+char	*ft_strdup(const char *s1);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*p;
 	unsigned int	i;
 
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if ((ft_strlen(s) - start) < len)
+		len = ft_strlen(s) - start;
 	i = 0;
 	p = malloc((len + 1) * sizeof(char));
 	if (!p)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
+/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:51:04 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 21:10:08 by mariannazhu      ###   ########.fr       */
+/*   Updated: 2023/11/18 13:43:56 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,16 @@ char	*ft_strdup(const char *s1)
 	ft_strlcpy(p, s1, (ft_strlen(s1) + 1));
 	return (p);
 }
+
+// int main()
+// {
+//     const char *str = "bonjour";
+//     char *duplicate = ft_strdup(str);
+//     if (duplicate != NULL)
+//     {
+//         printf("Original string: %s\n", str);
+//         printf("Duplicated string: %s\n", duplicate);
+//         free(duplicate); 
+//     }
+//     return (0);
+// }

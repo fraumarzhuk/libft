@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
+/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 22:59:29 by mariannazhu       #+#    #+#             */
-/*   Updated: 2023/11/17 21:07:07 by mariannazhu      ###   ########.fr       */
+/*   Updated: 2023/11/18 13:45:00 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,20 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+//     const char *str = "A noisy noise annoys an oyster most.";
+//     int trg = 'n';
+//     char *result = ft_strrchr(str, trg);
+//     if (result != NULL)
+//     {
+//         printf("Last '%c' is found at position: %ld\n", trg, result - str);
+//         printf("Substring: %s\n", result);
+//     }
+//     else
+//     {
+//         printf("Character '%c' not found in the string\n", trg);
+//     }
+//     return (0);
+// }

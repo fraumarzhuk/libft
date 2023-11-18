@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariannazhukova <mariannazhukova@studen    +#+  +:+       +#+        */
+/*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:59:20 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/17 20:50:45 by mariannazhu      ###   ########.fr       */
+/*   Updated: 2023/11/18 13:42:54 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,12 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	return (dest);
 }
+
+// int main()
+// {
+// 	char str2[] = "bonjour";
+// 	char str1[20];
+// 	size_t len = 7;
+// 	ft_memmove(str1, str2, len);
+// 	printf("Moved string is: %s\n", str2);
+// }

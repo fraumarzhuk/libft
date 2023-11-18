@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:13:19 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/15 15:28:27 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/18 13:42:29 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int main()
+// {
+// 	char str1[] = "A noisy noise annoys";
+// 	char str2[] = "A noisy noise annoys an oyster most.";
+// 	size_t len1 = 20;
+// 	int  result1 = ft_memcmp(str1, str2, len1);
+// 	printf("Result = %d\n", result1);
+// }

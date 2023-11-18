@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:48:02 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/15 15:28:06 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/18 13:42:18 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,17 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+//     char array[60] = "A noisy noise annoys an oyster most.";
+//     int c = 'i';
+//     char *ptr;
+//     unsigned long size = 10;
+//     ptr = ft_memchr(array, c, size);
+//     if (ptr != NULL)
+//         printf("Character '%c' is in position %ld\n", *ptr, (ptr - array));
+//     else
+//         printf("Character not found.\n");
+//     return (0);
+// }

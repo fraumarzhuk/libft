@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 19:19:38 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/14 19:52:29 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/18 13:40:23 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,11 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+
+// int main()
+// {
+//     const char *str = "-42"; 
+//     int result = ft_atoi(str);
+//     printf("Result: %d\n", result);
+//     return (0);
+// }
